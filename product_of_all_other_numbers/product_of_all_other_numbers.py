@@ -5,9 +5,22 @@ Returns: a List of integers
 
 
 def product_of_all_other_numbers(arr):
-    # Your code here
+    product = 1
+    ans = []
 
-    pass
+    for ii, num in enumerate(arr):
+        ans.append(product)
+        product *= num
+
+    print(ans)
+    product = 1
+
+    for ii in range(len(arr) - 1, -1, -1):
+        print(product)
+        ans[ii] = ans[ii] * product
+        product *= arr[ii]
+
+    return ans
 
 
 if __name__ == '__main__':
