@@ -12,11 +12,9 @@ def product_of_all_other_numbers(arr):
         ans.append(product)
         product *= num
 
-    print(ans)
     product = 1
 
     for ii in range(len(arr) - 1, -1, -1):
-        print(product)
         ans[ii] = ans[ii] * product
         product *= arr[ii]
 
